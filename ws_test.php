@@ -1,7 +1,8 @@
 <?php
     use Workerman\Worker;
     require_once __DIR__ . '/Autoloader.php';
-
+	
+	Worker::$daemonize = true;
     // 创建一个Worker监听2346端口，使用websocket协议通讯
     $ws_worker = new Worker("websocket://127.0.0.1:2346");
 
